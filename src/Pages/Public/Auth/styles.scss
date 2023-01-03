@@ -1,0 +1,95 @@
+@import 'src/Sass/main.scss';
+
+.auth-section {
+  max-height: 100vh;
+  height: 100vh;
+  background-color: $sub-primaryBackground;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .form-section {
+    @include flex-column;
+    background: $secondaryBackground;
+    border-radius: 20px;
+    @include padding-medium;
+    min-width: 400px;
+    min-height: 500px;
+    width: 33%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    & .form-head {
+      flex: 4;
+      @include flex-column-all-center;
+      &-image img {
+        max-width: 100%;
+      }
+      &-mainHeading {
+        @include primary-heading;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 75px;
+      }
+      &-subHeading {
+        @include secondary-heading;
+        font-size: 15px;
+        line-height: 22px;
+        @include flex-row-all-center;
+
+        color: $primaryFontColor;
+      }
+    }
+    & .form-body {
+      flex: 4;
+      @include flex-column-all-center;
+      & .auth-input {
+        filter: drop-shadow(0px 2px 4px rgba(23, 23, 23, 0.18));
+        @include margin-y-small;
+        max-width: 300px;
+
+        @include padding-y-medium;
+        @include padding-x-small;
+        background: $secondaryBackground;
+        opacity: 0.8;
+      }
+      & .forgot-password {
+        text-align: right;
+        width: 100%;
+        max-width: 300px;
+
+        & a {
+          /* identical to box height */
+          @include description-details-font-small;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 0.02em;
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+    & .form-actions {
+      flex: 0 0 100px;
+      @include flex-column-space-between-center;
+
+      & a {
+        @include description-details-font-small;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $primaryColor;
+      }
+      & button {
+        padding: 0.6rem 0.5rem;
+        background: $primaryColor;
+        border-radius: 100px;
+        max-width: 33%;
+        min-width: 150px;
+        color: $secondaryBackground;
+      }
+    }
+  }
+}

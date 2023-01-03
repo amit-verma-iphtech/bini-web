@@ -1,0 +1,58 @@
+@import '/src/Sass/main';
+.canvas_container{
+  position: relative;
+  & canvas{
+    background-color: #1f1f1f;
+    height: $player_and_canvas_height;
+    width: 500px;
+  }
+  & .canvas_details{
+    & span {
+      font-weight: 700;
+    }
+    @include flex-row-space-between;
+    // & .canvas_button:hover {
+    //   color: white;
+    //   background-color: #00baff;
+    // }
+  }
+}
+.canvas_controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.canvas_button {
+  height: 3em;
+  width: 6em;
+  // margin: 1em;
+  font-weight: bold;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
+  &_select{
+    width: 8rem;
+  }
+}
+
+
+.canvas_button:focus {
+  border: 1px solid #00baff;
+}
+
+// .canvas_button:hover {
+//   color: black;
+//   background-color: #00baff;
+// }
+.canvas_button:active {
+  background-color: #1f1f1f;
+  color: white;
+}
+.canvas_button:disabled {
+  background-color: gray;
+  color: white;
+}

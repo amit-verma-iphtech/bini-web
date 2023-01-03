@@ -1,0 +1,39 @@
+// // Typography
+
+@mixin font-family($fontSize, $fontWeight) {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+}
+@mixin primary-heading {
+  font-weight: 600;
+  font-size: 2.6rem;
+  padding: 0.5rem 0;
+  color: $primaryFontColor;
+}
+@mixin secondary-heading {
+  font-weight: 500;
+  font-size: 1.4rem;
+  @include padding-x-medium;
+  @include padding-y-small;
+  line-height: 1.4rem;
+  color: $primaryFontColor;
+}
+@mixin secondary-sub-heading {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  padding: 0.5rem 0;
+  color: $primaryFontColor;
+}
+@mixin description-details-font-medium {
+  font-size: 1.6rem;
+  // line-height: 2.4rem;
+  color: $secondaryFontColor;
+}
+@mixin description-details-font-small {
+  font-size: 0.8rem;
+  // line-height: 2.4rem;
+  color: $secondaryFontColor;
+}

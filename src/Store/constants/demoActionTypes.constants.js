@@ -1,0 +1,20 @@
+export const START_DEMO = 'START_DEMO';
+export const DEMO_ERROR = 'DEMO_ERROR';
+export const DEMO_DONE = 'DEMO_DONE';
+
+export const PRODUCT_DEMO = 'PRODUCT_DEMO';
+export const ACTION_DEMO = 'ACTION_DEMO';
+export const FULL_DEMO = 'FULL_DEMO';
+export const USER_DEMO = 'USER_DEMO';
+export const OBSERVATION_DEMO = 'OBSERVATION_DEMO';
+export const COMMAND_DEMO = 'COMMAND_DEMO';
+export const TOGGLE_DEMO = 'TOGGLE_DEMO';
+export const DEMO_END = 'DEMO_END';
+export const TOGGLE_LOADING = 'TOGGLE_LOADING';
+export const ADD_EXTRA_OBSERVATION = 'ADD_EXTRA_OBSERVATION';
+
+export const DEMO_OBSERVATION_UPDATE = 'DEMO_OBSERVATION_UPDATE';
+export const DEMO_ACTION_ADD = 'DEMO_ACTION_ADD';
+export const DEMO_VISIT_ADD = 'DEMO_VISIT_ADD';
+export const DEMO_VISIT_EXIT = 'DEMO_VISIT_EXIT';
+export const DEMO_BASKET_UPDATE = 'DEMO_BASKET_UPDATE';

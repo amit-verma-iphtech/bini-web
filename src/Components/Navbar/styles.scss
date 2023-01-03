@@ -1,0 +1,92 @@
+@import '/src/Sass/main';
+
+.navbar {
+  @include flex-row-justify-center;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  border: 2px solid #f7f7f7;
+  max-height: $nav-height-small;
+  height: $nav-height-small;
+  &-left {
+    flex: 1;
+    & .logo {
+      cursor: pointer;
+      width: 300px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      & div {
+        margin: 0.5rem;
+      }
+      &-name {
+        @include primary-heading;
+        color: $primaryColor;
+      }
+      &-logo {
+      }
+    }
+  }
+  &-mid {
+    @include flex-row-all-center;
+    padding: 0.5rem 0;
+    & .search-wrapper {
+      width: 100%;
+      max-width: 500px;
+      background: #ffffff;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 100px;
+      @include flex-row-all-center;
+
+      padding: 0.5rem;
+      & .icon {
+        margin: 0 0.5rem;
+      }
+      &-input {
+        max-width: 90%;
+        outline: none;
+        border: none;
+        padding: 0.5rem 0;
+        margin: 0;
+        background-color: transparent;
+        @include secondary-heading;
+
+        /* identical to box height */
+
+        @include flex-row-align-center;
+        color: #292929;
+
+        opacity: 0.6;
+      }
+    }
+    flex: 1;
+  }
+  &-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    & .navbar-right-menu {
+      @include flex-row-justify-center;
+      & button {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        background-color: #f1f1f1;
+        border: none;
+        outline: none;
+      }
+    }
+    & > div {
+      margin: 0 0.5rem;
+    }
+    & .profile-menu {
+      @include secondary-heading;
+
+      & > div {
+        margin: 0 0.2rem;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "/src/Sass/main";
+.main_section {
+  @include flex-row-space-between;
+  overflow: hidden;
+  @include deduct-nav-height(100vh);
+
+  & .section {
+    position: relative;
+    &_preview {
+      position: relative;
+      flex: 15 15 600px;
+      @include flex-column-align-center;
+      &_actions{
+        @include flex-row-space-between-center;
+        width: 100%;
+        // @include padding-x-medium;
+        padding-left:2rem;
+      }
+      justify-content: flex-start;
+      background: $primaryBackground;
+    }
+  }
+}
+
+.settings_container{
+  // border:1px solid red;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  & > div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    // border:2px solid black;
+    flex: 1;
+    height: 100%;
+    & .list_container{
+      @include flex-row-all-center;
+      height: 100%;
+      @include border-red;
+      @include padding-medium;
+      overflow: scroll;
+    }
+  }
+}
+.section_list{
+ @include border-black;
+ width: 100%;
+ @include flex-column-justify-center;
+ 
+}

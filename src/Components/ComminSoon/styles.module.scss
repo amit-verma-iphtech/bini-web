@@ -1,0 +1,6 @@
+@import "/src/Sass/main";
+.coming_soon {
+  flex: 1; // border: 3px solid red;
+  @include deduct-nav-height(100vh);
+  @include flex-row-all-center;
+}

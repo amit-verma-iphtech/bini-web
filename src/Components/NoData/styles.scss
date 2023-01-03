@@ -1,0 +1,10 @@
+@import 'src/Sass/main.scss';
+
+.no-data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include secondary-heading;
+}

@@ -1,0 +1,31 @@
+@import '@yaireo/tagify/dist/tagify.css';
+@import '../../Sass/main';
+$padding: 1.5rem;
+
+body .tagify {
+  margin-bottom: 3em;
+  --tag-bg: #6c0e42;
+  --tag-text-color: white;
+  --tag-text-color--edit: var(--tag-bg);
+  --tag-hover: rgb(162, 8, 56);
+  --tag-remove-btn-color: white;
+}
+
+.clearAllBtn {
+  float: right;
+  border: 1px solid #6c0e42;
+  border-radius: 2px;
+  outline: #6c0e42;
+  padding: 0.2rem 0.5rem;
+  margin: 0.5em;
+  margin-right: $padding;
+  + div {
+    clear: both;
+  }
+  @include description-details-font-small;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: #6c0e42;
+  }
+}

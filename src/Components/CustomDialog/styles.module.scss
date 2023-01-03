@@ -1,0 +1,18 @@
+@import 'src/Sass/main.scss';
+
+.close_icon_wrap {
+  position: absolute;
+  right:.5rem;
+  top:.5rem;
+  background:red;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999999999999px;
+  outline: none;
+  border: none;
+  @include flex-row-all-center;
+  cursor: pointer;
+  & .icon{
+    color:white
+  }
+}

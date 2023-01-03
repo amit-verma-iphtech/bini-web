@@ -1,0 +1,95 @@
+@import 'src/Sass/main.scss';
+
+.main-videoClip-container {
+  max-width: 70vw;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  & .head {
+    @include secondary-heading;
+  }
+  & .scroll-menu {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    & .video-clip {
+      margin: 0.8rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 0px 0px $primaryColor;
+      transition: box-shadow 0.3s linear;
+      &:hover,
+      &.active {
+        box-shadow: 0px 0px 2px 2px $primaryColor;
+      }
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+      .dot {
+        z-index: 99;
+        &-id {
+          color: $primaryColor;
+        }
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        margin: 0 0.5rem;
+      }
+      &.watched .dot {
+        #tick-mark {
+          position: relative;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
+
+        #tick-mark::before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          height: 50%;
+          width: 2px;
+          background-color: $primaryColor;
+          content: '';
+          transform: translateX(10px) rotate(-45deg);
+          transform-origin: left bottom;
+        }
+
+        #tick-mark::after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 100%;
+          background-color: $primaryColor;
+          content: '';
+          transform: translateX(10px) rotate(-45deg);
+          transform-origin: left bottom;
+        }
+      }
+      & video,
+      .thumbnail {
+        border-radius: 6px;
+        max-height: 56px;
+        max-width: 150px;
+        height: 56px;
+        width: 150px;
+      }
+      & div.thumbnail {
+        // background-color: red;
+        min-height: 56px;
+        min-width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        &.loaded {
+          // background-color: green;
+        }
+      }
+    }
+  }
+}

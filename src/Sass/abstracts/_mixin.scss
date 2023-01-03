@@ -1,0 +1,165 @@
+// /*======== Start Site Mixins ========*/
+
+@mixin flex-row-all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column-all-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-row-justify-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-column-justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin flex-row-end-align-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+@mixin flex-row-align-center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-column-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin flex-column-space-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin flex-row-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex-column-space-between-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-row-space-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-row-start-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@mixin flex-row-no-shrink-no-grow {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+@mixin flex-grow-shrink($grow, $shrink) {
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+}
+@mixin padding-y-medium {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@mixin padding-y-large {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@mixin padding-y-small {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@mixin padding-x-medium {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@mixin padding-x-large {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@mixin padding-x-small {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+@mixin padding-large {
+  padding: 2rem;
+}
+@mixin padding-medium {
+  padding: 1rem;
+}
+@mixin padding-small {
+  padding: 0.5rem;
+}
+@mixin padding-very-small {
+  padding: 0.2rem;
+}
+@mixin margin-y-medium {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@mixin margin-y-large {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@mixin margin-y-small {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@mixin margin-x-medium {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@mixin margin-x-large {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+@mixin margin-x-small {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+@mixin margin-large {
+  margin: 2rem;
+}
+@mixin margin-medium {
+  margin: 1rem;
+}
+@mixin margin-small {
+  margin: 0.5rem;
+}
+@mixin heading-small {
+  margin: 0.5rem;
+}
+@mixin deduct-nav-height($height) {
+  height: calc(#{$height} - #{$nav-height-small});
+  max-height: calc(#{$height} - #{$nav-height-small});
+}
+@mixin border-round {
+border-radius: 99999999999999999999999px;
+}
+@mixin border-red {
+border: 1px solid red;
+}
+@mixin border-black {
+border: 1px solid black;
+}

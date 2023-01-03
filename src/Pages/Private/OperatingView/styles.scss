@@ -1,0 +1,100 @@
+@import '/src/Sass/main';
+.main-section {
+  @include flex-row-space-between;
+  overflow: hidden;
+  @include deduct-nav-height(100vh);
+
+  & .section {
+    position: relative;
+    &-preview {
+      position: relative;
+      flex: 15 15 600px;
+      @include flex-column-align-center;
+      justify-content: flex-start;
+      background: $primaryBackground;
+      & .video-preview-container {
+        position: relative;
+
+        @include flex-grow-shrink(1, 1);
+        max-width: 70vw;
+        width: 100%;
+        height: 100%;
+        @include flex-column-space-between;
+        .player-container{
+            @include flex-row-space-between;
+          }
+        & .video-player {
+          position: relative;
+
+          @include flex-grow-shrink(3, 3);
+          @include flex-row-justify-center;
+          flex-direction: column;
+          & .player-skeleton{
+            height: $player_and_canvas_height;
+          }
+          & video {
+            height: $player_and_canvas_height;
+          }
+          & .details-box {
+            position: relative;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include padding-small;
+          }
+          & .react-player {
+            position: relative;
+
+            max-height: 40vh;
+          }
+        }
+        & .video-list {
+          position: relative;
+
+          flex: 0 2 150px;
+          @include flex-row-justify-center;
+        }
+      }
+
+      & .products-container {
+        position: relative;
+
+        @include flex-row-no-shrink-no-grow;
+        flex-basis: 220px;
+        max-width: 70vw;
+        width: 100%;
+        overflow: hidden;
+        background: $secondaryBackground;
+        border-radius: 8px;
+        @include padding-x-medium;
+        margin: 0 0 1rem 0;
+      }
+    }
+    &-information {
+      position: relative;
+
+      flex: 0 0 25%;
+      max-width: 300px;
+      @include flex-column-space-between;
+      padding: 0 0.8rem;
+      & .user-container {
+        position: relative;
+
+        flex: 0 1 30%;
+        @include flex-row-all-center;
+      }
+      & .activity-container {
+        position: relative;
+
+        flex: 0 1 30%;
+      }
+      & .command-container {
+        position: relative;
+
+        flex: 0 0 20%;
+        margin-top: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "src/Sass/main.scss";
+
+.main-activities-container {
+  max-height: 35vh;
+
+  padding: 0.5rem;
+  & .heading {
+    @include secondary-heading;
+  }
+  & .activities-list-scroll {
+    background: #f5f6f8;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+
+    max-height: 35vh;
+    height: 500px;
+    overflow-y: scroll;
+    & .activity-clip {
+      background: #ffffff;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0.5rem 0;
+      @include flex-row-all-center;
+
+      & .dot {
+        margin: 0 0.5rem;
+        border: 4px solid $primaryColor;
+        width: 0px;
+        border-radius: 99999999999px;
+        height: 1px;
+      }
+      & .activity-item {
+        width: 100%;
+        @include description-details-font-small;
+        @include flex-row-space-between-center;
+        @include padding-y-small;
+        & .time {
+          min-width: 80px;
+          padding: 0 0.5rem 0 0;
+          flex: 0 0 50px;
+          & span.center {
+            @include flex-row-space-between-center;
+          }
+          @include flex-column-all-center;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import 'src/Sass/main.scss';
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: E5E5E5;
+  @include font-family(1rem, 'medium');
+  position: relative;
+}
+.display-none {
+  display: none;
+}
+.app-version {
+  & span {
+    margin: 0.2rem;
+    border: 1px solid gray;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    color: gray;
+  }
+  // background-color: rgba(128, 128, 128, 0.404);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999999999;
+}

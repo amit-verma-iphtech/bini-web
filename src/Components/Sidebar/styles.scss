@@ -1,0 +1,117 @@
+@import '/src/Sass/main';
+@keyframes sidebarHide {
+  0% {
+    flex-basis: 200px;
+  }
+
+  100% {
+    opacity: 1;
+    flex-basis: 60px;
+  }
+}
+@keyframes sidebarShowText {
+  0% {
+    opacity: 0;
+    max-width: 0px;
+  }
+
+  80% {
+    opacity: 0;
+    max-width: 0px;
+  }
+
+  100% {
+    opacity: 1;
+    max-width: none;
+  }
+}
+@keyframes sidebarShow {
+  0% {
+    flex-basis: 60px;
+  }
+
+  100% {
+    flex-basis: 200px;
+  }
+}
+
+.section {
+  &-sidebar {
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+    background: $secondaryBackground;
+    border: 2px solid #f0f0f0;
+    & .sidebar-toggle {
+      align-self: flex-end;
+      cursor: pointer;
+
+      margin: 0.5rem 1.2rem 0 0;
+    }
+    & .sidebar-items {
+      display: flex;
+      flex-direction: column;
+      & > .item {
+        @include flex-row-align-center;
+        & .text {
+          @include flex-row-all-center;
+          @include description-details-font-medium;
+          // color: $primaryFontColor;
+        color:$primaryColor;
+        font-weight: 600;
+
+        }
+        & .icon {
+          @include flex-row-all-center;
+        }
+        cursor: pointer;
+        width: 75%;
+        border-radius: 0 100px 100px 0;
+        margin: 0.5rem 0;
+        padding: 0.8rem 0;
+        @include flex-row-align-center;
+        & > div {
+          margin: 0 0.5rem;
+        }
+        &.active {
+          & svg {
+            stroke: white;
+          }
+          & .text {
+            color: white;
+          }
+          background: $primaryColor;
+        }
+      }
+    }
+    &.default-show {
+      flex-basis: 200px;
+      opacity: 1;
+      max-width: none;
+    }
+    &.default-hide {
+      flex-basis: 60px;
+      & .sidebar-items .item .text {
+        max-width: 0px;
+        opacity: 0;
+      }
+    }
+    @include flex-row-no-shrink-no-grow;
+    &.show {
+      animation: sidebarShow 0.5s ease-out;
+      flex-basis: 200px;
+      & .sidebar-items .item .text {
+        animation: sidebarShowText 0.5s ease-out;
+        max-width: none;
+      }
+    }
+    &.close {
+      animation: sidebarHide 0.5s ease-out;
+      flex-basis: 60px;
+      & .sidebar-items .item .text {
+        max-width: 0px;
+        opacity: 0;
+      }
+    }
+  }
+}
