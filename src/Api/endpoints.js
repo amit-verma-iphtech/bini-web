@@ -1,7 +1,7 @@
 const endpoints = {
-  'baseUri': 'https://bini-qcommerce-backend.herokuapp.com',
+  // 'baseUri': 'https://bini-qcommerce-backend.herokuapp.com',
   // 'baseUri': 'http://localhost:3000',
-  // 'baseUri': 'http://localhost:8080',
+  'baseUri': 'http://localhost:8080',
   'signIn': '/auth/login',
   'signUp': '/auth/register',
   'items': '/items',
