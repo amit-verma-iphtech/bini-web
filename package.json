@@ -48,8 +48,8 @@
     "yarn": "^1.22.19"
   },
   "scripts": {
-    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
-    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
+    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start  --openssl-legacy-provider start",
+    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build  --openssl-legacy-provider start",
     "eject": "SKIP_PREFLIGHT_CHECK=true react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
