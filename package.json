@@ -83,7 +83,8 @@
     ]
   },
   "browser": {
-    "fs": false
+    "fs": false,
+    "path" : false
  },
   "devDependencies": {
     "@storybook/addon-actions": "^6.4.22",
