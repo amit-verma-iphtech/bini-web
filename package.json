@@ -70,6 +70,10 @@
       }
     ]
   },
+  "browser": {
+    ".": "./dist/handlebars.min.js",
+    "./runtime": "./dist/handlebars.runtime.min.js"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
